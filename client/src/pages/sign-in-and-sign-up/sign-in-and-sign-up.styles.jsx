@@ -16,3 +16,12 @@ export const SignInAndSignUpContainer = styled.div`
     }
   }
 `;
+
+export const Error = styled.p`
+color: red;
+font-style: italic;
+font-weight: bold;
+display: flex;
+justify-content: center;
+`;
+
