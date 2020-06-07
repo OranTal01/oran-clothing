@@ -9,3 +9,9 @@ export const SignUpContainer = styled.div`
 export const SignUpTitle = styled.h2`
   margin: 10px 0;
 `;
+
+export const Error = styled.p`
+color: red;
+font-style: italic;
+font-weight: bold;
+`;

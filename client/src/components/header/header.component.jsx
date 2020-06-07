@@ -14,13 +14,15 @@ import {
   HeaderContainer,
   LogoContainer,
   OptionsContainer,
-  OptionLink
+  OptionLink,
+  DisplayName
 } from './header.styles';
 
 export const Header = ({ currentUser, hidden, signOutStart }) => (
   <HeaderContainer>
     <LogoContainer to='/'>
       <Logo className='logo' />
+      <DisplayName>{currentUser && currentUser.displayName}</DisplayName>
     </LogoContainer>
     <OptionsContainer>
       <OptionLink to='/shop'>SHOP</OptionLink>
@@ -30,8 +32,8 @@ export const Header = ({ currentUser, hidden, signOutStart }) => (
           SIGN OUT
         </OptionLink>
       ) : (
-        <OptionLink to='/signin'>SIGN IN</OptionLink>
-      )}
+          <OptionLink to='/signin'>SIGN IN</OptionLink>
+        )}
       <CartIcon />
     </OptionsContainer>
     {hidden ? null : <CartDropdown />}

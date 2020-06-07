@@ -5,10 +5,14 @@ const buttonStyles = css`
   color: white;
   border: none;
 
+
   &:hover {
     background-color: white;
     color: black;
     border: 1px solid black;
+  }
+  &:active{
+    outline: none
   }
 `;
 
@@ -22,6 +26,9 @@ const invertedButtonStyles = css`
     color: white;
     border: none;
   }
+  &:active{
+    outline: none
+  }
 `;
 
 const googleSignInStyles = css`
@@ -31,6 +38,9 @@ const googleSignInStyles = css`
   &:hover {
     background-color: #357ae8;
     border: none;
+  }
+  &:active{
+    outline: none
   }
 `;
 

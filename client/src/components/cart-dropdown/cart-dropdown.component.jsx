@@ -22,17 +22,20 @@ export const CartDropdown = ({ cartItems, history, dispatch }) => (
           <CartItem key={cartItem.id} item={cartItem} />
         ))
       ) : (
-        <EmptyMessageContainer>Your cart is empty</EmptyMessageContainer>
-      )}
+          <EmptyMessageContainer>Your cart is empty</EmptyMessageContainer>
+        )}
     </CartItemsContainer>
-    <CartDropdownButton
+    {cartItems.length ? <CartDropdownButton
       onClick={() => {
         history.push('/checkout');
         dispatch(toggleCartHidden());
       }}
     >
       GO TO CHECKOUT
-    </CartDropdownButton>
+    </CartDropdownButton> :
+      <CartDropdownButton>GO TO CHECKOUT</CartDropdownButton>
+    }
+
   </CartDropdownContainer>
 );
 

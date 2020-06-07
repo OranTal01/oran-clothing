@@ -1,14 +1,17 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
 
 import FormInput from '../form-input/form-input.component';
 import CustomButton from '../custom-button/custom-button.component';
 
+import { selectErrorCurrentUser } from '../../redux/user/user.selectors';
+
 import { signUpStart } from '../../redux/user/user.actions';
 
-import { SignUpContainer, SignUpTitle } from './sign-up.styles';
+import { SignUpContainer, SignUpTitle, Error } from './sign-up.styles';
 
-const SignUp = ({ signUpStart }) => {
+const SignUp = ({ signUpStart, error }) => {
   const [userCredentials, setUserCredentials] = useState({
     displayName: '',
     email: '',
@@ -39,6 +42,7 @@ const SignUp = ({ signUpStart }) => {
     <SignUpContainer>
       <SignUpTitle>I do not have a account</SignUpTitle>
       <span>Sign up with your email and password</span>
+      <Error>{error && error.message}</Error>
       <form className='sign-up-form' onSubmit={handleSubmit}>
         <FormInput
           type='text'
@@ -82,7 +86,11 @@ const mapDispatchToProps = dispatch => ({
   signUpStart: userCredentials => dispatch(signUpStart(userCredentials))
 });
 
+const mapStateToProps = createStructuredSelector({
+  error: selectErrorCurrentUser
+});
+
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(SignUp);

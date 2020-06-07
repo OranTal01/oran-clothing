@@ -6,6 +6,30 @@ const StripeCheckoutButton = ({ price }) => {
   const priceForStripe = price * 100;
   const publishableKey = 'pk_test_b7a3hFL5nC3qlBCZ6bQACpez00gyMMP52H';
 
+  const CARD_OPTIONS = {
+    iconStyle: 'solid',
+    style: {
+      base: {
+        iconColor: '#c4f0ff',
+        color: '#fff',
+        fontWeight: 500,
+        fontFamily: 'Roboto, Open Sans, Segoe UI, sans-serif',
+        fontSize: '16px',
+        fontSmoothing: 'antialiased',
+        ':-webkit-autofill': {
+          color: '#fce883',
+        },
+        '::placeholder': {
+          color: '#87bbfd',
+        },
+      },
+      invalid: {
+        iconColor: '#ffc7ee',
+        color: '#ffc7ee',
+      },
+    },
+  };
+
   const onToken = token => {
     axios({
       url: 'payment',
@@ -38,6 +62,7 @@ const StripeCheckoutButton = ({ price }) => {
       panelLabel='Pay Now'
       token={onToken}
       stripeKey={publishableKey}
+      options={CARD_OPTIONS}
     />
   );
 };

@@ -26,6 +26,10 @@ export const LogoContainer = styled(Link)`
   }
 `;
 
+export const DisplayName = styled.div`
+width:100vw;
+`;
+
 export const OptionsContainer = styled.div`
   width: 50%;
   height: 100%;
