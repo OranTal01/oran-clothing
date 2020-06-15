@@ -15,9 +15,9 @@ export const CartDropdownContainer = styled.div`
   width: 350px
   text-align: center;
 
-  @media screen and (max-width: 390px) {
+  @media screen and (max-width: 410px) {
     width: 330px;
-    right: 11px;
+    right: 10px;
   }
   @media screen and (max-width: 350px) {
     width: 300px;
