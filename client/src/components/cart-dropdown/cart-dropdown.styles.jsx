@@ -40,7 +40,6 @@ EmptyMessageContainer.displayName = 'EmptyMessageContainer';
 
 export const CartItemsContainer = styled.div`
   height: 240px;
-  display: flex;
-  flex-direction: column;
+  display: block;
   overflow: scroll;
 `;
