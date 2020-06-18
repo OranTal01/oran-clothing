@@ -44,15 +44,5 @@ export const CartItemsContainer = styled.div`
   height: 240px;
   display: block;
   overflow: scroll;
-  width: 350px;
-
-  @media screen and (max-width: 410px) {
-    right: 10px;
-  }
-  @media screen and (max-width: 380px) {
-    width: 320px;
-  }
-  @media screen and (max-width: 340px) {
-    width: 290px;
-  }
+  width: 100%;
 `;
