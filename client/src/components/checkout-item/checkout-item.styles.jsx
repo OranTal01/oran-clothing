@@ -26,6 +26,7 @@ export const ImageContainer = styled.div`
 
 export const TextContainer = styled.span`
   width: 23%;
+  padding-right: 15px;
 
   @media screen and (max-width: 800px) {
     width: 22%;
@@ -37,6 +38,7 @@ export const QuantityContainer = styled(TextContainer)`
 
   span {
     margin: 0 10px;
+    padding-right: 15px;
   }
 
   div {
@@ -47,8 +49,10 @@ export const QuantityContainer = styled(TextContainer)`
 QuantityContainer.displayName = 'QuantityContainer';
 
 export const RemoveButtonContainer = styled.div`
-  padding-left: 12px;
   cursor: pointer;
+  @media screen and (max-width: 800px) {
+    padding-left: 0px;
+  }
 `;
 
 RemoveButtonContainer.displayName = 'RemoveButtonContainer';
