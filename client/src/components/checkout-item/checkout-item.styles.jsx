@@ -38,7 +38,6 @@ export const QuantityContainer = styled(TextContainer)`
 
   span {
     margin: 0 10px;
-    padding-right: 15px;
   }
 
   div {

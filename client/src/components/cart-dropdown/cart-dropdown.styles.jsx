@@ -12,7 +12,7 @@ export const CartDropdownContainer = styled.div`
   top: 90px;
   right: 40px;
   z-index: 5;
-  width: 355px
+  width: 355px;
   text-align: center;
 
   @media screen and (max-width: 410px) {
@@ -44,7 +44,7 @@ export const CartItemsContainer = styled.div`
   height: 240px;
   display: block;
   overflow: scroll;
-  width: 350px
+  width: 350px;
 
   @media screen and (max-width: 410px) {
     right: 10px;
